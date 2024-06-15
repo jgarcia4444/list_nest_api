@@ -7,7 +7,12 @@ def UsersController < ApplicationController
                 userInfo: created_user.format_properties_for_frontend
             }
         else
-
+            render :json => {
+                error: {
+                    message: "There was an error creating a user account.",
+                    errors: created_user.errors,
+                }
+            }
         end
     end
 
