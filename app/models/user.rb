@@ -10,6 +10,7 @@ class User < ApplicationRecord
             username: self.username,
             email: self.email,
             phoneNumber: self.phone_number,
+            id: self.id
         }
     end
 
